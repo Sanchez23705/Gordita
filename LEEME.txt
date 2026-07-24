@@ -1,0 +1,19 @@
+VERSIÓN DESPLEGABLE
+===================
+
+Esta versión NO funciona como diapositivas.
+
+Cada botón abre una nueva sección hacia abajo.
+Las partes anteriores permanecen visibles y la historia se va extendiendo.
+
+ARCHIVOS PARA LA CARPETA assets:
+- portada.jpg
+- foto1.jpg
+- foto2.jpg
+- foto3.jpg
+- foto4.jpg
+- foto5.jpg
+- foto6.jpg
+- musica.mp3
+
+Abre index.html para probar la página.

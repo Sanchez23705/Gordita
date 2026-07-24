@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1020">
+  <title>6 meses contigo, mi gordita ❤️</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css?v=6">
+
+  <style>
+    /* CONTADOR INTEGRADO EN EL HTML PARA EVITAR PROBLEMAS DE CACHÉ */
+    .love-counter {
+      position: relative !important;
+      display: block !important;
+      width: min(100%, 720px) !important;
+      margin: 44px auto 10px !important;
+      padding: 38px 22px 30px !important;
+      overflow: hidden !important;
+      text-align: center !important;
+      border: 1px solid rgba(234, 217, 174, 0.28) !important;
+      border-radius: 32px !important;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(217, 144, 165, 0.20), transparent 45%),
+        linear-gradient(145deg, rgba(255,255,255,0.09), rgba(255,255,255,0.025)) !important;
+      box-shadow:
+        0 28px 70px rgba(0,0,0,0.34),
+        inset 0 1px 0 rgba(255,255,255,0.07) !important;
+      backdrop-filter: blur(18px) !important;
+    }
+
+    .love-counter::before,
+    .love-counter::after {
+      position: absolute !important;
+      top: 19px !important;
+      color: rgba(240, 164, 185, 0.82) !important;
+      font-size: 1rem !important;
+      content: "♥" !important;
+    }
+
+    .love-counter::before {
+      left: 24px !important;
+    }
+
+    .love-counter::after {
+      right: 24px !important;
+    }
+
+    .love-counter > .eyebrow {
+      display: block !important;
+      margin: 0 0 12px !important;
+      color: rgba(234, 217, 174, 0.92) !important;
+      font-size: 0.67rem !important;
+      letter-spacing: 0.28em !important;
+      text-align: center !important;
+    }
+
+    .counter-date {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      margin: 0 auto 26px !important;
+      padding: 9px 18px !important;
+      border: 1px solid rgba(234, 217, 174, 0.18) !important;
+      border-radius: 999px !important;
+      color: rgba(247,239,227,0.80) !important;
+      background: rgba(7,11,22,0.34) !important;
+      font-family: "Cormorant Garamond", Georgia, serif !important;
+      font-size: clamp(1rem, 3.8vw, 1.18rem) !important;
+      line-height: 1.2 !important;
+    }
+
+    .days-main {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      margin: 0 0 30px !important;
+    }
+
+    .days-main #counterDays {
+      display: block !important;
+      width: 100% !important;
+      color: #fff2c8 !important;
+      text-align: center !important;
+      text-shadow:
+        0 0 24px rgba(216,181,109,0.22),
+        0 12px 32px rgba(0,0,0,0.28) !important;
+      font-family: "Cormorant Garamond", Georgia, serif !important;
+      font-size: clamp(5.2rem, 18vw, 8.2rem) !important;
+      font-weight: 600 !important;
+      line-height: 0.82 !important;
+      letter-spacing: -0.04em !important;
+      font-variant-numeric: tabular-nums !important;
+    }
+
+    .days-main strong {
+      display: block !important;
+      margin-top: 15px !important;
+      color: rgba(247,239,227,0.84) !important;
+      font-family: "Cormorant Garamond", Georgia, serif !important;
+      font-size: clamp(1.5rem, 5vw, 2rem) !important;
+      font-style: italic !important;
+      font-weight: 500 !important;
+      line-height: 1.1 !important;
+    }
+
+    .time-row {
+      display: grid !important;
+      grid-template-columns: 1fr auto 1fr auto 1fr !important;
+      align-items: center !important;
+      gap: 9px !important;
+      width: min(100%, 520px) !important;
+      margin: 0 auto !important;
+    }
+
+    .time-box {
+      display: block !important;
+      min-width: 0 !important;
+      padding: 18px 8px 15px !important;
+      text-align: center !important;
+      border: 1px solid rgba(255,255,255,0.10) !important;
+      border-radius: 20px !important;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.075), rgba(5,9,19,0.22)) !important;
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.05),
+        0 14px 28px rgba(0,0,0,0.16) !important;
+    }
+
+    .time-box span {
+      display: block !important;
+      color: #ead9ae !important;
+      text-align: center !important;
+      font-family: "Cormorant Garamond", Georgia, serif !important;
+      font-size: clamp(2rem, 7vw, 3rem) !important;
+      font-weight: 600 !important;
+      line-height: 0.95 !important;
+      font-variant-numeric: tabular-nums !important;
+    }
+
+    .time-box small {
+      display: block !important;
+      margin-top: 9px !important;
+      color: rgba(231,233,240,0.58) !important;
+      text-align: center !important;
+      font-family: "Montserrat", Arial, sans-serif !important;
+      font-size: 0.58rem !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.12em !important;
+      text-transform: uppercase !important;
+    }
+
+    .time-separator {
+      display: block !important;
+      color: rgba(234,217,174,0.5) !important;
+      font-family: "Cormorant Garamond", Georgia, serif !important;
+      font-size: 2rem !important;
+      line-height: 1 !important;
+      transform: translateY(-8px) !important;
+    }
+
+    .counter-message {
+      display: block !important;
+      max-width: 520px !important;
+      margin: 25px auto 0 !important;
+      color: rgba(236,238,244,0.68) !important;
+      text-align: center !important;
+      font-family: "Cormorant Garamond", Georgia, serif !important;
+      font-size: clamp(1rem, 3.8vw, 1.18rem) !important;
+      font-style: italic !important;
+      line-height: 1.55 !important;
+    }
+
+    @media (max-width: 520px) {
+      .love-counter {
+        padding: 38px 14px 26px !important;
+        border-radius: 28px !important;
+      }
+
+      .time-row {
+        gap: 5px !important;
+      }
+
+      .time-box {
+        padding: 15px 5px 13px !important;
+        border-radius: 17px !important;
+      }
+
+      .time-box span {
+        font-size: clamp(1.75rem, 9vw, 2.35rem) !important;
+      }
+
+      .time-separator {
+        font-size: 1.4rem !important;
+      }
+    }
+  </style>
+
+</head>
+<body>
+
+  <audio id="bgMusic" loop preload="metadata">
+    <source src="assets/musica.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="musicBtn" class="music-btn" aria-label="Activar música">♪</button>
+
+  <header class="hero">
+    <div id="heartContainer" class="heart-container" aria-hidden="true"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <p class="eyebrow">24 de julio de 2026</p>
+
+      <h1>
+        Buenos días,<br>
+        <span>mi gordita</span> ❤️
+      </h1>
+
+      <p>
+        Hoy celebramos seis meses de noviazgo y siete meses desde aquella
+        primera cita que cambió nuestra historia.
+      </p>
+
+      <button class="reveal-btn" data-target="parte1">
+        Comenzar nuestra historia
+      </button>
+    </div>
+  </header>
+
+  <main class="story">
+
+    <section id="parte1" class="story-section collapsed">
+      <div class="section-inner">
+        <p class="eyebrow">Dos fechas, una sola historia</p>
+        <h2>Todo comenzó antes de llamarnos novios</h2>
+
+        <p class="intro-text">
+          Hay historias que empiezan con una fecha oficial, y otras que comienzan
+          mucho antes, con una mirada, una conversación y una primera cita
+          imposible de olvidar.
+        </p>
+
+        <div class="memory-card">
+          <span class="date">25.12.2025</span>
+          <h3>Nuestra primera cita</h3>
+
+          <p>
+            Fue Navidad, pero el mejor regalo no estaba envuelto. Ese día comenzó
+            algo que quizá todavía no sabíamos cuánto significaría.
+          </p>
+
+          <div class="photo-frame">
+            <img src="assets/foto1.png" alt="Nuestra primera cita">
+          </div>
+        </div>
+
+        <button class="reveal-btn" data-target="parte2">
+          Descubrir el siguiente momento
+        </button>
+      </div>
+    </section>
+
+    <section id="parte2" class="story-section collapsed">
+      <div class="section-inner">
+        <p class="eyebrow">El día que nos elegimos</p>
+        <h2>24 de enero de 2026</h2>
+
+        <div class="memory-card highlight">
+          <span class="date">24.01.2026</span>
+          <h3>Comenzó oficialmente lo nuestro</h3>
+
+          <p>
+            Un mes después, dejamos de ser solamente dos personas compartiendo
+            momentos y comenzamos oficialmente nuestra historia como novios.
+          </p>
+
+          <div class="photo-frame">
+            <img src="assets/foto2.png" alt="El día que nos hicimos novios">
+          </div>
+        </div>
+
+        <button class="reveal-btn" data-target="parte3">
+          Ver nuestros seis meses
+        </button>
+      </div>
+    </section>
+
+    <section id="parte3" class="story-section collapsed">
+      <div class="section-inner">
+        <p class="eyebrow">Nuestros primeros seis meses</p>
+        <h2>Seis capítulos que quiero guardar</h2>
+
+        <p class="intro-text">
+          Toca cada mes para descubrir un mensaje.
+        </p>
+
+        <div class="months-grid">
+          <button class="month-card"
+                  data-title="Enero"
+                  data-text="El mes en que dijiste que sí y nuestra historia comenzó oficialmente. Desde ese día, el 24 dejó de ser una fecha cualquiera.">
+            <span>01</span>
+            <strong>Enero</strong>
+          </button>
+
+          <button class="month-card"
+                  data-title="Febrero"
+                  data-text="El mes en que empezamos a descubrir la belleza de compartir los días sencillos, las conversaciones y los pequeños detalles.">
+            <span>02</span>
+            <strong>Febrero</strong>
+          </button>
+
+          <button class="month-card"
+                  data-title="Marzo"
+                  data-text="Un mes para seguir conociéndonos, reír juntos y crear recuerdos que ahora forman parte de nuestra historia.">
+            <span>03</span>
+            <strong>Marzo</strong>
+          </button>
+
+          <button class="month-card"
+                  data-title="Abril"
+                  data-text="El mes que me recordó que amar también es aprender, escuchar y cuidar lo que estamos construyendo.">
+            <span>04</span>
+            <strong>Abril</strong>
+          </button>
+
+          <button class="month-card"
+                  data-title="Mayo"
+                  data-text="Otro capítulo contigo: con momentos bonitos, enseñanzas y razones nuevas para seguir eligiéndote.">
+            <span>05</span>
+            <strong>Mayo</strong>
+          </button>
+
+          <button class="month-card"
+                  data-title="Junio y julio"
+                  data-text="Los meses que nos trajeron hasta hoy. No somos una historia perfecta, pero sí una historia que deseo cuidar con hechos, cariño y verdad.">
+            <span>06</span>
+            <strong>Junio + Julio</strong>
+          </button>
+        </div>
+
+        <button class="reveal-btn" data-target="parte4">
+          Abrir nuestros recuerdos
+        </button>
+      </div>
+    </section>
+
+    <section id="parte4" class="story-section collapsed">
+      <div class="section-inner">
+        <p class="eyebrow">Momentos que hablan por nosotros</p>
+        <h2>Un pedacito de nuestra historia</h2>
+
+        <div class="gallery">
+          <img src="assets/foto3.png" alt="Recuerdo con Jenny">
+          <img src="assets/foto4.png" alt="Momento especial">
+          <img src="assets/foto5.png" alt="Recuerdo juntos">
+          <img src="assets/foto6.png" alt="Nuestra historia">
+        </div>
+
+        <div class="love-counter">
+          <p class="eyebrow">Desde nuestra primera cita</p>
+
+          <div class="counter-date">
+            25 de diciembre de 2025
+          </div>
+
+          <div class="days-main">
+            <span id="counterDays">0</span>
+            <strong>días juntos</strong>
+          </div>
+
+          <div class="time-row" aria-label="Tiempo desde nuestra primera cita">
+            <div class="time-box">
+              <span id="counterHours">00</span>
+              <small>Horas</small>
+            </div>
+
+            <div class="time-separator">:</div>
+
+            <div class="time-box">
+              <span id="counterMinutes">00</span>
+              <small>Minutos</small>
+            </div>
+
+            <div class="time-separator">:</div>
+
+            <div class="time-box">
+              <span id="counterSeconds">00</span>
+              <small>Segundos</small>
+            </div>
+          </div>
+
+          <p class="counter-message">
+            Cada segundo contigo forma parte de nuestra historia ❤️
+          </p>
+        </div>
+
+        <button class="reveal-btn" data-target="parte5">
+          Lo que quiero construir contigo
+        </button>
+      </div>
+    </section>
+
+    <section id="parte5" class="story-section collapsed">
+      <div class="section-inner">
+        <p class="eyebrow">Para nuestro siguiente capítulo</p>
+        <h2>Tres cosas que quiero demostrarte</h2>
+
+        <div class="promise-list">
+          <article>
+            <span>01</span>
+            <div>
+              <h3>Cuidar los pequeños detalles</h3>
+              <p>
+                Porque muchas veces el amor se siente más fuerte en lo sencillo.
+              </p>
+            </div>
+          </article>
+
+          <article>
+            <span>02</span>
+            <div>
+              <h3>Amarte también con acciones</h3>
+              <p>
+                No solamente decirlo, sino hacerte sentir importante, valorada
+                y elegida.
+              </p>
+            </div>
+          </article>
+
+          <article>
+            <span>03</span>
+            <div>
+              <h3>Seguir aprendiendo contigo</h3>
+              <p>
+                Escuchar, mejorar y construir una relación de la que ambos nos
+                sintamos orgullosos.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <button class="reveal-btn" data-target="parte6">
+          Abrir mi carta para ti
+        </button>
+      </div>
+    </section>
+
+    <section id="parte6" class="story-section collapsed">
+      <div class="section-inner">
+        <div class="envelope">
+          <div class="envelope-top"></div>
+
+          <div class="letter">
+            <p class="salutation">Mi gordita:</p>
+
+            <p>
+              Nuestra historia no comenzó el día en que nos hicimos novios.
+              Comenzó antes, en aquella primera cita del 25 de diciembre, cuando
+              sin saberlo estábamos dando el primer paso hacia todo lo que hoy somos.
+            </p>
+
+            <p>
+              El 24 de enero decidimos elegirnos oficialmente, y hoy celebramos
+              seis meses desde aquel día.
+            </p>
+
+            <p>
+              Han sido meses de momentos hermosos, aprendizajes, errores, risas,
+              cariño y recuerdos que siempre voy a guardar. No quiero decirte que
+              nuestra historia ha sido perfecta; quiero decirte que, aun con todo
+              lo vivido, sigo queriendo cuidarla, mejorar y continuar construyéndola
+              contigo.
+            </p>
+
+            <p>
+              Gracias por aquella primera cita. Gracias por decirme que sí.
+              Gracias por estos primeros seis meses.
+            </p>
+
+            <p class="closing">
+              Feliz mes, mi gordita.<br>
+              Te amo y te elegiría nuevamente. ❤️
+            </p>
+
+            <p class="signature">Tu niño</p>
+          </div>
+        </div>
+
+        <button class="reveal-btn" data-target="parte7">
+          Ver el final
+        </button>
+      </div>
+    </section>
+
+    <section id="parte7" class="story-section collapsed final-section">
+      <div class="section-inner final-content">
+        <p class="eyebrow">Esto comenzó en Navidad…</p>
+
+        <h2>
+          Pero quiero que dure todas las Navidades de mi vida.
+        </h2>
+
+        <div class="heart">♥</div>
+
+        <p class="final-small">6 meses siendo novios</p>
+
+        <strong>
+          y toda una vida que todavía quiero descubrir contigo.
+        </strong>
+
+        <p class="final-love">Te amo, Jenny ❤️</p>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="monthModal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+
+    <div class="modal-card">
+      <button id="closeModal" class="modal-close">×</button>
+      <p class="eyebrow">Nuestro capítulo</p>
+      <h3 id="modalTitle"></h3>
+      <p id="modalText"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
